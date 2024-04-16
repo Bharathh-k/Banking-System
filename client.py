@@ -1,7 +1,7 @@
 import socket
 
-SERVER_HOST = '192.168.56.1' 
-SERVER_PORT = 12345
+SERVER_HOST = '' #add server's IPv4 addres here 
+SERVER_PORT = '' #add server's Port Number here
 
 def send_request(request):
 
