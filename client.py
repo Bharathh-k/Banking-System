@@ -1,10 +1,10 @@
 import socket
+import os
 
-SERVER_HOST = '' #add server's IPv4 addres here 
-SERVER_PORT = '' #add server's Port Number here
+SERVER_HOST = os.getenv('SERVER_HOST')
+SERVER_PORT = int(os.getenv('SERVER_PORT')) 
 
 def send_request(request):
-
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     try:
@@ -64,4 +64,5 @@ def main():
         else:
             print("Invalid choice")
 
-main()
+if __name__ == "__main__":
+    main()
